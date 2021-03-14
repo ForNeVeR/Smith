@@ -12,13 +12,13 @@ Documentation
 Build
 -----
 
-To build Smith, you'll need [.NET Core SDK][dotnet] 5.1 or later.
+To build Smith, you'll need [.NET Core SDK][dotnet] 5.0 or later.
 
 ```
 $ dotnet build
 ```
 
-Project history
+Project History
 ---------------
 
 Smith is forked from [egram.tel][], a Telegram client.
