@@ -1,44 +1,31 @@
-# [egram.tel](https://egram.tel) - Telegram client
+# Smith [![Status Zero][status-zero]][andivionian-status-classifier]
 
-Egram is an unofficial crossplatform Telegram client written in C#, .NET Core, [ReactiveUI](https://github.com/reactiveui/ReactiveUI) and [Avalonia](https://github.com/AvaloniaUI/Avalonia).
+Smith is a cross-platform Matrix GUI client application written in .NET.
 
-| Platform | Status | Download |
-| -------- | ------ | -------- |
-| MacOS    | [![Build Status](https://dev.azure.com/egramtel/egramtel/_apis/build/status/egram?branchName=master)](https://dev.azure.com/egramtel/egramtel/_build/latest?definitionId=5?branchName=master) | **[.dmg](https://github.com/egramtel/egram.tel/releases)** |
-| Windows  | [![Build Status](https://dev.azure.com/egramtel/egramtel/_apis/build/status/egram?branchName=master)](https://dev.azure.com/egramtel/egramtel/_build/latest?definitionId=5?branchName=master) | **[.exe](https://github.com/egramtel/egram.tel/releases)** **[.zip](https://github.com/egramtel/egram.tel/releases)** |
-| Linux    | [![Build Status](https://dev.azure.com/egramtel/egramtel/_apis/build/status/egram?branchName=master)](https://dev.azure.com/egramtel/egramtel/_build/latest?definitionId=5?branchName=master) | **[.tar.gz](https://github.com/egramtel/egram.tel/releases)** |
+**⚠ Smith is at an early development stage, nothing is ready yet.**
 
-## Project
+Documentation
+-------------
 
-This project aims to be a full featured Telegram client with different approach to UI. Also some new features might be introduced to explore what might be implemented on Telegram platform. 100% compatibility with official clients is top priority for this project - features won't be added if they break this rule.
+- [License][license] (MIT)
 
-![screenshot](https://raw.githubusercontent.com/egramtel/egram.tel/master/screenshot.png)
+Build
+-----
 
-## License
+To build Smith, you'll need [.NET Core SDK][dotnet] 5.1 or later.
 
-Egram is MIT licensed.
-
-## Compiling
-
-To compile and run the application, you need to [download and install latest .NET Core SDK](https://www.microsoft.com/net/learn/dotnet/hello-world-tutorial). Clone the repository using [Git](https://git-scm.com/). Then, go into `egram.tel/src/Tel.Egram` directory and run `dotnet run` command.
-
-```sh
-# Remember to install .NET Core SDK and git before executing this.
-git clone https://github.com/egramtel/egram.tel
-cd egram.tel/src/Tel.Egram
-dotnet restore
-dotnet run
+```
+$ dotnet build
 ```
 
-## Contributing
+Project history
+---------------
 
-Contributors are welcome. Please submit an issue before introducing new features, then you might create a "work in progress" (WIP) pull request to prevent other people from working on the same feature. Dev group is here: [egram_dev](https://t.me/egram_dev), please feel free to ask questions. If you are new to this project there are some entry-level issues marked with "good first issue" tag.
+Smith is forked from [egram.tel][], a Telegram client.
 
-## Technology stack
+[dotnet]: https://dotnet.microsoft.com/download
+[egram.tel]: https://github.com/egramtel/egram.tel
+[license]: ./LICENSE
+[status-zero]: https://img.shields.io/badge/status-zero-lightgrey.svg
 
-* [.NET Core](https://github.com/dotnet)
-* [Avalonia](https://github.com/AvaloniaUI/Avalonia)
-* [Rx.NET](https://github.com/dotnet/reactive)
-* [ReactiveUI](https://github.com/reactiveui/ReactiveUI)
-* [Dynamic Data](https://github.com/RolandPheasant/DynamicData)
-* [TDLib](https://github.com/tdlib/td)
+[andivionian-status-classifier]: https://github.com/ForNeVeR/andivionian-status-classifier#status-zero-
