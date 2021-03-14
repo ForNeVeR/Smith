@@ -15,6 +15,20 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{767B3FCF-751
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tel.Egram.Views", "src\Tel.Egram.Views\Tel.Egram.Views.csproj", "{E272E3DE-72EF-42BF-9E76-09C569A4BCE9}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{7B719453-BD26-4EFA-A1C8-A615B287988F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{9A4D9C34-8259-4A9D-A452-3FE5D83262BF}"
+ProjectSection(SolutionItems) = preProject
+	.github\workflows\main.yml = .github\workflows\main.yml
+EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{32D6CBCC-B482-4AFF-A57C-C9DD37709623}"
+ProjectSection(SolutionItems) = preProject
+	.editorconfig = .editorconfig
+	README.md = README.md
+	CHANGELOG.md = CHANGELOG.md
+EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +65,7 @@ Global
 		{D532C829-670F-463A-BF6E-1557C0FCC33B} = {767B3FCF-751E-46FC-AF59-0949BA90EB74}
 		{DAF9F0FC-DFE1-48FC-92B3-30721D3A7A3F} = {767B3FCF-751E-46FC-AF59-0949BA90EB74}
 		{E272E3DE-72EF-42BF-9E76-09C569A4BCE9} = {767B3FCF-751E-46FC-AF59-0949BA90EB74}
+		{9A4D9C34-8259-4A9D-A452-3FE5D83262BF} = {7B719453-BD26-4EFA-A1C8-A615B287988F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3D35C07F-9F13-4E04-A5E0-36C92839CCD3}

@@ -16,8 +16,10 @@ Build
 To build Smith, you'll need [.NET Core SDK][dotnet] 5.0 or later.
 
 ```
-$ dotnet build
+$ dotnet build --configuration Release
 ```
+
+(replace `Release` with `Debug` for debug build)
 
 Project History
 ---------------
