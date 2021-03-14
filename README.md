@@ -7,6 +7,7 @@ Smith is a cross-platform Matrix GUI client application written in .NET.
 Documentation
 -------------
 
+- [Changelog][changelog]
 - [License][license] (MIT)
 
 Build
@@ -23,6 +24,7 @@ Project History
 
 Smith is forked from [egram.tel][], a Telegram client.
 
+[changelog]: ./CHANGELOG.md
 [dotnet]: https://dotnet.microsoft.com/download
 [egram.tel]: https://github.com/egramtel/egram.tel
 [license]: ./LICENSE
