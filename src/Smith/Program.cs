@@ -6,7 +6,7 @@ using Tel.Egram.Application;
 using Tel.Egram.Model.Application;
 using Tel.Egram.Views.Application;
 
-namespace Tel.Egram
+namespace Smith
 {
     public static class Program
     {
