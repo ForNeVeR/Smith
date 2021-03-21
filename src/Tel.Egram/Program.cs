@@ -1,19 +1,23 @@
-﻿using System;
-using Avalonia;
+﻿using Avalonia;
 using Avalonia.Platform;
+using JetBrains.Annotations;
 using Splat;
 using Tel.Egram.Application;
-using Tel.Egram.Views.Application;
 using Tel.Egram.Model.Application;
+using Tel.Egram.Views.Application;
 
 namespace Tel.Egram
 {
-    public class Program
+    public static class Program
     {
         public static void Main(string[] args)
         {
-            ConfigureServices(Locator.CurrentMutable);
-            Run(Locator.Current);
+            var builder = BuildAvaloniaApp();
+            var model = new MainWindowModel();
+
+            model.Activator.Activate();
+            builder.Start<MainWindow>(() => model);
+            model.Activator.Deactivate();
         }
 
         private static void ConfigureServices(
@@ -23,7 +27,7 @@ namespace Tel.Egram
             services.AddTdLib();
             services.AddPersistance();
             services.AddServices();
-            
+
             services.AddComponents();
             services.AddApplication();
             services.AddAuthentication();
@@ -32,14 +36,19 @@ namespace Tel.Egram
             services.AddMessenger();
         }
 
-        private static void Run(
-            IDependencyResolver resolver)
+        [UsedImplicitly]
+        public static AppBuilder BuildAvaloniaApp()
+        {
+            ConfigureServices(Locator.CurrentMutable);
+            return BuildApp(Locator.Current);
+        }
+
+        private static AppBuilder BuildApp(IDependencyResolver resolver)
         {
             var app = resolver.GetService<MainApplication>();
             var builder = AppBuilder.Configure(app);
             var runtime = builder.RuntimePlatform.GetRuntimeInfo();
-            var model = new MainWindowModel();
-            
+
             switch (runtime.OperatingSystem)
             {
                 case OperatingSystemType.OSX:
@@ -51,7 +60,7 @@ namespace Tel.Egram
                         })
                         .UseSkia();
                     break;
-                
+
                 case OperatingSystemType.Linux:
                     builder.UseX11()
                         .With(new X11PlatformOptions
@@ -60,7 +69,7 @@ namespace Tel.Egram
                         })
                         .UseSkia();
                     break;
-                
+
                 default:
                     builder.UseWin32()
                         .With(new Win32PlatformOptions
@@ -73,9 +82,7 @@ namespace Tel.Egram
 
             builder.UseReactiveUI();
 
-            model.Activator.Activate();
-            builder.Start<MainWindow>(() => model);
-            model.Activator.Deactivate();
+            return builder;
         }
     }
 }
