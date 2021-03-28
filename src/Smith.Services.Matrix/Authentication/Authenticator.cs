@@ -12,7 +12,7 @@ namespace Smith.Services.Authentication
         private readonly IAgent _agent;
 
         private readonly BehaviorSubject<AuthenticationState> _authenticationState =
-            new(AuthenticationState.WaitingHomeserver);
+            new(AuthenticationState.WaitingLoginAndPassword);
 
         public Authenticator(IAgent agent)
         {
@@ -21,17 +21,16 @@ namespace Smith.Services.Authentication
 
         public IObservable<AuthenticationState> ObserveState() => _authenticationState;
 
-        public void SetHomeserver(Uri homeserver)
-        {
-            _agent.SetHomeserver(homeserver);
-            _authenticationState.OnNext(AuthenticationState.WaitingLoginAndPassword);
-        }
-
         public IObservable<Unit> CheckLoginAndPassword(string login, string password) =>
             Observable.FromAsync(async ct =>
             {
+                var loginComponents = login.Split(':', 2); // TODO: Proper UI workflow with homeserver
+                var loginUser = loginComponents[0];
+                var homeserverHost = loginComponents[1];
+
+                _agent.SetHomeserver(new Uri($"https://{homeserverHost}"));
                 _authenticationState.OnNext(AuthenticationState.Authenticating);
-                var result = await _agent.AuthenticateAsync(login, password, ct);
+                var result = await _agent.AuthenticateAsync(loginUser, password, ct);
                 _agent.SetAccessToken(result.AccessToken.NotNull());
                 _authenticationState.OnNext(AuthenticationState.Authenticated);
             });

@@ -2,7 +2,6 @@
 {
     public enum AuthenticationState
     {
-        WaitingHomeserver,
         WaitingLoginAndPassword,
         Authenticating,
         Authenticated
