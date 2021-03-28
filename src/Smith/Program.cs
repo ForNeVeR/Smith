@@ -25,6 +25,7 @@ namespace Smith
         {
             services.AddUtils();
             services.AddTdLib();
+            services.AddMatrixSdk();
             services.AddPersistance();
             services.AddServices();
 
