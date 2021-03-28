@@ -12,6 +12,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tel.Egram.Services", "src\Tel.Egram.Services\Tel.Egram.Services.csproj", "{DAF9F0FC-DFE1-48FC-92B3-30721D3A7A3F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{767B3FCF-751E-46FC-AF59-0949BA90EB74}"
+ProjectSection(SolutionItems) = preProject
+	src\Directory.Build.props = src\Directory.Build.props
+EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tel.Egram.Views", "src\Tel.Egram.Views\Tel.Egram.Views.csproj", "{E272E3DE-72EF-42BF-9E76-09C569A4BCE9}"
 EndProject

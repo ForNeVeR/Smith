@@ -18,7 +18,7 @@ namespace Tel.Egram.Model.Messenger.Explorer.Loaders
     public class NextMessageLoader
     {
         private readonly MessageLoaderConductor _conductor;
-        
+
         private readonly IChatLoader _chatLoader;
         private readonly IMessageLoader _messageLoader;
         private readonly IMessageModelFactory _messageModelFactory;
@@ -31,7 +31,7 @@ namespace Tel.Egram.Model.Messenger.Explorer.Loaders
         {
             _conductor = conductor;
         }
-        
+
         public NextMessageLoader(
             IChatLoader chatLoader,
             IMessageLoader messageLoader,
@@ -41,7 +41,7 @@ namespace Tel.Egram.Model.Messenger.Explorer.Loaders
             _messageLoader = messageLoader;
             _messageModelFactory = messageModelFactory;
         }
-        
+
         public IDisposable Bind(
             ExplorerModel model,
             Chat chat)
@@ -58,7 +58,7 @@ namespace Tel.Egram.Model.Messenger.Explorer.Loaders
                 .ObserveOn(RxApp.MainThreadScheduler)
                 .Accept(list => HandleLoading(model, list));
         }
-        
+
         private IObservable<IList<MessageModel>> StartLoading(
             ExplorerModel model,
             Chat chat)
@@ -70,14 +70,14 @@ namespace Tel.Egram.Model.Messenger.Explorer.Loaders
                 .OfType<MessageModel>()
                 .Last()
                 .Message;
-            
+
             return LoadNextMessages(chat, fromMessage)
                 .ObserveOn(RxApp.TaskpoolScheduler)
                 .SubscribeOn(RxApp.MainThreadScheduler)
                 .Finally(() =>
                 {
                     _conductor.IsBusy = false;
-                });;
+                });
         }
 
         private void HandleLoading(
@@ -87,7 +87,7 @@ namespace Tel.Egram.Model.Messenger.Explorer.Loaders
             //Console.WriteLine("End next");
             model.SourceItems.AddRange(messageModels);
         }
-        
+
         public IObservable<IList<MessageModel>> LoadNextMessages(
             Chat chat,
             Message fromMessage)

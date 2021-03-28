@@ -19,7 +19,7 @@ namespace Tel.Egram.Model.Messenger.Explorer.Loaders
     public class PrevMessageLoader
     {
         private readonly MessageLoaderConductor _conductor;
-        
+
         private readonly IChatLoader _chatLoader;
         private readonly IMessageLoader _messageLoader;
         private readonly IMessageModelFactory _messageModelFactory;
@@ -32,7 +32,7 @@ namespace Tel.Egram.Model.Messenger.Explorer.Loaders
         {
             _conductor = conductor;
         }
-        
+
         public PrevMessageLoader(
             IChatLoader chatLoader,
             IMessageLoader messageLoader,
@@ -42,7 +42,7 @@ namespace Tel.Egram.Model.Messenger.Explorer.Loaders
             _messageLoader = messageLoader;
             _messageModelFactory = messageModelFactory;
         }
-        
+
         public IDisposable Bind(
             ExplorerModel model,
             Chat chat)
@@ -59,7 +59,7 @@ namespace Tel.Egram.Model.Messenger.Explorer.Loaders
                 .ObserveOn(RxApp.MainThreadScheduler)
                 .Accept(list => HandleLoading(model, chat, list));
         }
-        
+
         private IObservable<IList<MessageModel>> StartLoading(
             ExplorerModel model,
             Chat chat)
@@ -71,14 +71,14 @@ namespace Tel.Egram.Model.Messenger.Explorer.Loaders
                 .OfType<MessageModel>()
                 .First()
                 .Message;
-            
+
             return LoadPrevMessages(chat, fromMessage)
                 .ObserveOn(RxApp.TaskpoolScheduler)
                 .SubscribeOn(RxApp.MainThreadScheduler)
                 .Finally(() =>
                 {
                     _conductor.IsBusy = false;
-                });;
+                });
         }
 
         private void HandleLoading(
@@ -108,9 +108,9 @@ namespace Tel.Egram.Model.Messenger.Explorer.Loaders
             model.TargetItem = targetItem;
             model.SourceItems.InsertRange(messageModels, 0);
         }
-        
+
         public IObservable<IList<MessageModel>> LoadPrevMessages(
-            Chat chat, 
+            Chat chat,
             Message fromMessage)
         {
             return _chatLoader.LoadChat(chat.ChatData.Id)
