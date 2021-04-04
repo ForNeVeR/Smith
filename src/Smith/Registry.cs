@@ -102,9 +102,6 @@ namespace Smith
 
         public static void AddPersistance(this IMutableDependencyResolver services)
         {
-            services.RegisterLazySingleton<IResourceManager>(
-                () => new ResourceManager(typeof(MainApplication).Assembly));
-
             services.RegisterLazySingleton<IStorage>(() => new Storage());
 
             services.RegisterLazySingleton<IFileLoader>(() =>
@@ -269,7 +266,7 @@ namespace Smith
             {
                 var application = new MainApplication();
 
-                application.Initializing += (sender, args) =>
+                application.Initializing += (_, _) =>
                 {
                     var db = services.GetService<DatabaseContext>();
                     db.Database.Migrate();
@@ -289,7 +286,7 @@ namespace Smith
                     });
                 };
 
-                application.Disposing += (sender, args) =>
+                application.Disposing += (_, _) =>
                 {
                     var hub = services.GetService<Hub>();
                     hub.Stop();
