@@ -12,7 +12,6 @@ namespace Smith
             _logger = logger;
         }
 
-
         public void OnError(Exception error)
         {
             _logger.LogError(error, "Error during error processing");
