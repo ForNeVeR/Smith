@@ -1,7 +1,7 @@
 using System;
 using Avalonia.Media;
 
-namespace Tel.Egram.Application.Styles
+namespace Smith.Application.Styles
 {
     /// <summary>
     /// Temp workaround for using fonts in styles
@@ -9,7 +9,7 @@ namespace Tel.Egram.Application.Styles
     public class RobotoFontFamily : FontFamily
     {
         public RobotoFontFamily()
-            : base ("Roboto", new Uri("resm:Tel.Egram.Application.Fonts?assembly=Tel.Egram.Application"))
+            : base ("Roboto", new Uri("resm:Smith.Application.Fonts?assembly=Smith.Application"))
         {
         }
     }

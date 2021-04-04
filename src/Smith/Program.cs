@@ -2,7 +2,7 @@
 using Avalonia.Platform;
 using JetBrains.Annotations;
 using Splat;
-using Tel.Egram.Application;
+using Smith.Application;
 using Smith.Model.Application;
 using Tel.Egram.Views.Application;
 

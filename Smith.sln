@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.28010.2003
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Smith", "src\Smith\Smith.csproj", "{9E350FAF-4C2D-4E47-B6A7-FBBB72450418}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tel.Egram.Application", "src\Tel.Egram.Application\Tel.Egram.Application.csproj", "{563D970A-38C2-4C36-8252-667A0984F6BA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Smith.Application", "src\Smith.Application\Smith.Application.csproj", "{563D970A-38C2-4C36-8252-667A0984F6BA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Smith.Model", "src\Smith.Model\Smith.Model.csproj", "{D532C829-670F-463A-BF6E-1557C0FCC33B}"
 EndProject

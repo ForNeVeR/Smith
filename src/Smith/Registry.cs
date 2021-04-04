@@ -6,7 +6,7 @@ using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Options;
 using Splat;
 using TdLib;
-using Tel.Egram.Application;
+using Smith.Application;
 using Smith.Model.Messenger.Explorer.Factories;
 using Smith.Model.Notifications;
 using Smith.Model.Popups;

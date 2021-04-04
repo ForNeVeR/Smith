@@ -5,32 +5,32 @@
     <Grid
         ColumnDefinitions="*,auto"
         RowDefinitions="46,6,*">
-        
+
         <TextBox
             Grid.Row="0"
             Grid.Column="0"
             Watermark="Search chats and messages" />
-        
+
         <Rectangle
             Grid.Row="1"
             Grid.Column="0"
             Grid.ColumnSpan="2" />
-        
+
         <Button
             Grid.Row="0"
             Grid.Column="1">
-            
+
             <Panel>
                 <Ellipse />
-                <Image Source="resm:Tel.Egram.Application.Icons.Light.More32.png?assembly=Tel.Egram.Application" />
+                <Image Source="resm:Smith.Application.Icons.Light.More32.png?assembly=Smith.Application" />
             </Panel>
-            
+
         </Button>
-        
+
     </Grid>
-    
+
     <UserControl.Styles>
-        
+
         <Style Selector="TextBox">
             <Setter Property="Height" Value="28" />
             <Setter Property="Margin" Value="14,2,8,0" />
@@ -38,15 +38,15 @@
             <Setter Property="Background" Value="#ffffff" />
             <Setter Property="BorderBrush" Value="#d8d8d8" />
         </Style>
-        
+
         <Style Selector="TextBox /template/ Border">
             <Setter Property="CornerRadius" Value="4" />
         </Style>
-        
+
         <Style Selector="Rectangle">
             <Setter Property="Fill">
                 <Setter.Value>
-                    <LinearGradientBrush 
+                    <LinearGradientBrush
                         StartPoint="0%,0%"
                         EndPoint="0%,100%">
                         <LinearGradientBrush.GradientStops>
@@ -61,7 +61,7 @@
                 </Setter.Value>
             </Setter>
         </Style>
-        
+
         <Style Selector="Button">
             <Setter Property="Width" Value="26" />
             <Setter Property="Height" Value="26" />
@@ -71,18 +71,18 @@
             <Setter Property="BorderThickness" Value="0" />
             <Setter Property="BorderBrush" Value="Transparent" />
         </Style>
-        
+
         <Style Selector="Button Image">
             <Setter Property="Width" Value="14" />
             <Setter Property="Height" Value="14" />
         </Style>
-        
+
         <Style Selector="Button Ellipse">
             <Setter Property="Width" Value="24" />
             <Setter Property="Height" Value="24" />
             <Setter Property="Fill" Value="#5f6e8c" />
         </Style>
-        
+
     </UserControl.Styles>
 
 </UserControl>
