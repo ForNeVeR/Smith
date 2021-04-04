@@ -8,4 +8,7 @@ Versioning v2.0.0](https://semver.org/spec/v2.0.0.html).
 ## [Unreleased]
 Project forked from [egram.tel](https://github.com/egramtel/egram.tel).
 
+### Added
+- Simple Matrix authentication
+
 [Unreleased]: https://github.com/ForNeVeR/Smith/tree/HEAD
