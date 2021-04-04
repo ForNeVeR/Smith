@@ -4,7 +4,6 @@
     xmlns:application="clr-namespace:Smith.Views.Application"
     xmlns:authentication="clr-namespace:Smith.Views.Authentication"
     xmlns:workspace="clr-namespace:Smith.Views.Workspace"
-    xmlns:startup="clr-namespace:Smith.Views.Startup"
     xmlns:popups="clr-namespace:Smith.Views.Popups"
     Width="800"
     Height="600"
@@ -22,9 +21,6 @@
 
         <Carousel
             SelectedIndex="{Binding PageIndex}">
-
-            <startup:StartupControl
-                DataContext="{Binding StartupModel}" />
 
             <authentication:AuthenticationControl
                 DataContext="{Binding AuthenticationModel}" />

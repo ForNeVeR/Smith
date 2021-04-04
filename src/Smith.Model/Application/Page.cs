@@ -2,8 +2,7 @@ namespace Smith.Model.Application
 {
     public enum Page
     {
-        Initial = 0,
-        Authentication = 1,
-        Workspace = 2
+        Authentication = 0,
+        Workspace = 1
     }
 }

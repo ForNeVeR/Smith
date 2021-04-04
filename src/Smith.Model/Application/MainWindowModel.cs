@@ -1,7 +1,6 @@
 using System.Reactive.Disposables;
 using PropertyChanged;
 using ReactiveUI;
-using Smith.Model.Application.Startup;
 using Smith.Model.Authentication;
 using Smith.Model.Popups;
 using Smith.Model.Workspace;
@@ -11,8 +10,6 @@ namespace Smith.Model.Application
     [AddINotifyPropertyChangedInterface]
     public class MainWindowModel : ISupportsActivation
     {
-        public StartupModel StartupModel { get; set; }
-
         public AuthenticationModel AuthenticationModel { get; set; }
 
         public WorkspaceModel WorkspaceModel { get; set; }

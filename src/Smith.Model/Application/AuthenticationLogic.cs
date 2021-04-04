@@ -2,7 +2,6 @@ using System;
 using System.Reactive.Disposables;
 using System.Reactive.Linq;
 using ReactiveUI;
-using Smith.Model.Application.Startup;
 using Smith.Model.Authentication;
 using Smith.Model.Workspace;
 using Smith.Services.Matrix.Authentication;
@@ -55,20 +54,6 @@ namespace Smith.Model.Application
             }
         }
 
-        // TODO[F]: Remove this
-        private static void GoToStartupPage(MainWindowModel model)
-        {
-            if (model.StartupModel == null)
-            {
-                model.StartupModel = new StartupModel();
-            }
-
-            model.WorkspaceModel = null;
-            model.AuthenticationModel = null;
-
-            model.PageIndex = (int) Page.Initial;
-        }
-
         private static void GoToAuthenticationPage(MainWindowModel model)
         {
             if (model.AuthenticationModel == null)
@@ -78,7 +63,6 @@ namespace Smith.Model.Application
 
             model.PageIndex = (int) Page.Authentication;
 
-            model.StartupModel = null;
             model.WorkspaceModel = null;
         }
 
@@ -91,7 +75,6 @@ namespace Smith.Model.Application
 
             model.PageIndex = (int) Page.Workspace;
 
-            model.StartupModel = null;
             model.AuthenticationModel = null;
         }
     }
