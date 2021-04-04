@@ -43,7 +43,8 @@ namespace Smith.Model.Authentication
 
         private bool AreCredentialsValid(string userId, string password)
         {
-            return !string.IsNullOrWhiteSpace(userId) && !string.IsNullOrWhiteSpace(password);
+            if (string.IsNullOrWhiteSpace(userId) || string.IsNullOrWhiteSpace(password)) return false;
+            return Authenticator.ExtractUserIdAndHomeServer(userId).HasValue;
         }
 
         private IObservable<AuthenticationResult> Authenticate(string userId, string password) =>

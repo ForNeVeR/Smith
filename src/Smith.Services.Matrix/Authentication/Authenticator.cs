@@ -9,6 +9,13 @@ namespace Smith.Services.Authentication
 {
     public class Authenticator : IAuthenticator
     {
+        public static (string userId, string homeserver)? ExtractUserIdAndHomeServer(string userIdString)
+        {
+            var components = userIdString.Split(':', 2); // TODO: Proper UI workflow with homeserver
+            if (components.Length < 2) return null;
+            return (components[0], components[1]);
+        }
+
         private readonly IAgent _agent;
 
         private readonly BehaviorSubject<AuthenticationState> _authenticationState =
@@ -24,13 +31,11 @@ namespace Smith.Services.Authentication
         public IObservable<Unit> CheckLoginAndPassword(string login, string password) =>
             Observable.FromAsync(async ct =>
             {
-                var loginComponents = login.Split(':', 2); // TODO: Proper UI workflow with homeserver
-                var loginUser = loginComponents[0];
-                var homeserverHost = loginComponents[1];
+                var (userId, homeserverHost) = ExtractUserIdAndHomeServer(login)!.Value;
 
                 _agent.SetHomeserver(new Uri($"https://{homeserverHost}"));
                 _authenticationState.OnNext(AuthenticationState.Authenticating);
-                var result = await _agent.AuthenticateAsync(loginUser, password, ct);
+                var result = await _agent.AuthenticateAsync(userId, password, ct);
                 _agent.SetAccessToken(result.AccessToken.NotNull());
                 _authenticationState.OnNext(AuthenticationState.Authenticated);
             });
