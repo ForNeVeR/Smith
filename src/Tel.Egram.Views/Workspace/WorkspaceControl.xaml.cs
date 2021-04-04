@@ -1,7 +1,7 @@
 ﻿using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
-using Tel.Egram.Model.Workspace;
+using Smith.Model.Workspace;
 
 namespace Tel.Egram.Views.Workspace
 {

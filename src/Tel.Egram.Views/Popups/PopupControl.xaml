@@ -2,18 +2,18 @@
     xmlns="https://github.com/avaloniaui"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:proxy1="clr-namespace:Tel.Egram.Views.Popups.Proxy"
-    xmlns:proxy="clr-namespace:Tel.Egram.Model.Settings.Proxy;assembly=Tel.Egram.Model">
-    
+    xmlns:proxy="clr-namespace:Smith.Model.Settings.Proxy;assembly=Smith.Model">
+
     <Grid
         RowDefinitions="auto,*"
         ColumnDefinitions="*,auto,*">
-        
+
         <Rectangle
             Grid.RowSpan="3"
             Grid.ColumnSpan="3"
             Fill="#000000"
             Opacity="0.75" />
-        
+
         <Border
             Grid.Column="1"
             Grid.Row="0"
@@ -22,11 +22,11 @@
             BorderThickness="1"
             BorderBrush="#00c8ff"
             CornerRadius="2">
-            
+
             <Grid
                 RowDefinitions="auto,auto,auto"
                 ColumnDefinitions="auto,*,auto">
-                
+
                 <Border
                     Classes="Title"
                     Grid.Row="0"
@@ -38,7 +38,7 @@
                         Text="{Binding Context.Title}"
                         VerticalAlignment="Center" />
                 </Border>
-                
+
                 <Button
                     Grid.Row="0"
                     Grid.Column="2"
@@ -48,15 +48,15 @@
                     Margin="8"
                     Background="Transparent"
                     BorderThickness="0">
-                    
+
                     <Image
                         Source="resm:Tel.Egram.Application.Icons.Dark.X32.png?assembly=Tel.Egram.Application"
                         Width="16"
                         Height="16"
                         Opacity="0.66" />
-                    
+
                 </Button>
-                
+
                 <Carousel
                     Grid.Row="2"
                     Grid.ColumnSpan="3"
@@ -65,25 +65,25 @@
                     Margin="12,20,12,12"
                     Items="{Binding Contexts}"
                     SelectedItem="{Binding Context}">
-                    
+
                     <Carousel.DataTemplates>
-                        
+
                         <DataTemplate DataType="{x:Type proxy:ProxyPopupContext}">
                             <proxy1:ProxyPopupControl />
                         </DataTemplate>
-                        
+
                     </Carousel.DataTemplates>
-                    
+
                 </Carousel>
-                
+
             </Grid>
-            
+
         </Border>
-        
+
     </Grid>
-    
+
     <UserControl.Styles>
-        
+
         <Style Selector="Border.Title">
             <Setter Property="Margin" Value="0" />
             <Setter Property="Padding" Value="10,0,10,0"/>
@@ -93,12 +93,12 @@
             <Setter Property="BorderBrush" Value="#dddddd" />
             <!-- <Setter Property="CornerRadius" Value="8,8,0,0" /> -->
         </Style>
-        
+
         <Style Selector="Border.Title TextBlock">
             <!-- <Setter Property="Foreground" Value="#ffffff" /> -->
             <!-- <Setter Property="FontSize" Value="13" /> -->
         </Style>
-        
+
     </UserControl.Styles>
-    
+
 </UserControl>

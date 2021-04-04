@@ -1,7 +1,7 @@
 ﻿using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
-using Tel.Egram.Model.Workspace.Navigation;
+using Smith.Model.Workspace.Navigation;
 
 namespace Tel.Egram.Views.Workspace.Navigation
 {

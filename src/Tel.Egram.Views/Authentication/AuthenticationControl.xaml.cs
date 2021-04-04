@@ -1,7 +1,7 @@
 ﻿using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
-using Tel.Egram.Model.Authentication;
+using Smith.Model.Authentication;
 
 namespace Tel.Egram.Views.Authentication
 {

@@ -3,7 +3,7 @@
         <!-- TODO: Eventually enable everywhere -->
         <Nullable Condition="
             '$(MSBuildProjectName)' == 'Tel.Egram.Services'
-            Or '$(MSBuildProjectName)' == 'Tel.Egram.Model'
+            Or '$(MSBuildProjectName)' == 'Smith.Model'
             Or '$(MSBuildProjectName)' == 'Tel.Egram.Views'">disable</Nullable>
 
         <TreatWarningsAsErrors>true</TreatWarningsAsErrors>

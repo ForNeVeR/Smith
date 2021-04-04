@@ -1,5 +1,5 @@
 ﻿using Avalonia.Markup.Xaml;
-using Tel.Egram.Model.Messenger.Explorer.Messages.Visual;
+using Smith.Model.Messenger.Explorer.Messages.Visual;
 
 namespace Tel.Egram.Views.Messenger.Explorer.Messages.Visual
 {

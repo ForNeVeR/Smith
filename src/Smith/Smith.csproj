@@ -18,7 +18,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Tel.Egram.Application\Tel.Egram.Application.csproj" />
-    <ProjectReference Include="..\Tel.Egram.Model\Tel.Egram.Model.csproj" />
+    <ProjectReference Include="..\Smith.Model\Smith.Model.csproj" />
     <ProjectReference Include="..\Tel.Egram.Services\Tel.Egram.Services.csproj" />
     <ProjectReference Include="..\Smith.Services.Matrix\Smith.Services.Matrix.csproj" />
   </ItemGroup>

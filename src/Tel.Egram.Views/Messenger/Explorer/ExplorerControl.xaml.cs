@@ -7,7 +7,7 @@ using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
 using Avalonia.Threading;
 using ReactiveUI;
-using Tel.Egram.Model.Messenger.Explorer;
+using Smith.Model.Messenger.Explorer;
 using Tel.Egram.Services.Utils;
 using Tel.Egram.Services.Utils.Reactive;
 
@@ -28,13 +28,13 @@ namespace Tel.Egram.Views.Messenger.Explorer
                 (o, v) => o.TargetItem = v);
 
         private readonly ListBox _listBox;
-        
+
         public ExplorerControl()
         {
             AvaloniaXamlLoader.Load(this);
-            
+
             _listBox = this.FindControl<ListBox>("ItemList");
-            
+
             this.WhenActivated(disposables =>
             {
                 var offsetChanges = _listBox.WhenAnyValue(lb => lb.Scroll.Offset)
@@ -43,7 +43,7 @@ namespace Tel.Egram.Views.Messenger.Explorer
                     .Select(_ => Unit.Default);
                 var viewportChanges = _listBox.WhenAnyValue(lb => lb.Scroll.Viewport)
                     .Select(_ => Unit.Default);
-                
+
                 offsetChanges
                     .Merge(extentChanges)
                     .Merge(viewportChanges)
@@ -78,19 +78,19 @@ namespace Tel.Egram.Views.Messenger.Explorer
 
             var topTreshold = offset.Y;
             var bottomTreshold = offset.Y + viewport.Height;
-                
+
             int i = 0;
             var items = _listBox?.Items;
 
             int from = Int32.MaxValue;
             int to = Int32.MinValue;
-                
+
             if (items != null)
             {
                 foreach (var item in items)
                 {
                     var listBoxItem = (ListBoxItem)_listBox.ItemContainerGenerator.ContainerFromIndex(i);
-                        
+
                     var top = listBoxItem.Bounds.TopLeft.Y;
                     var bottom = listBoxItem.Bounds.BottomLeft.Y;
                     if (bottom >= topTreshold && top <= bottomTreshold)

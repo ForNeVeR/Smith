@@ -2,7 +2,7 @@
 using Avalonia;
 using Avalonia.Markup.Xaml;
 using ReactiveUI;
-using Tel.Egram.Model.Application;
+using Smith.Model.Application;
 
 namespace Tel.Egram.Views.Application
 {
@@ -15,7 +15,7 @@ namespace Tel.Egram.Views.Application
                 this.BindNotifications()
                     .DisposeWith(disposables);
             });
-            
+
             AvaloniaXamlLoader.Load(this);
             this.AttachDevTools();
         }

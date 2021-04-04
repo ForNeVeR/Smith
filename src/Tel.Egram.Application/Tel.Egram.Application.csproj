@@ -23,7 +23,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Tel.Egram.Model\Tel.Egram.Model.csproj" />
+    <ProjectReference Include="..\Smith.Model\Smith.Model.csproj" />
     <ProjectReference Include="..\Tel.Egram.Views\Tel.Egram.Views.csproj" />
   </ItemGroup>
   <ItemGroup>

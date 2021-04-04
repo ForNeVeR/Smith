@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Smith", "src\Smith\Smith.cs
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tel.Egram.Application", "src\Tel.Egram.Application\Tel.Egram.Application.csproj", "{563D970A-38C2-4C36-8252-667A0984F6BA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tel.Egram.Model", "src\Tel.Egram.Model\Tel.Egram.Model.csproj", "{D532C829-670F-463A-BF6E-1557C0FCC33B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Smith.Model", "src\Smith.Model\Smith.Model.csproj", "{D532C829-670F-463A-BF6E-1557C0FCC33B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tel.Egram.Services", "src\Tel.Egram.Services\Tel.Egram.Services.csproj", "{DAF9F0FC-DFE1-48FC-92B3-30721D3A7A3F}"
 EndProject

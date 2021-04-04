@@ -1,5 +1,5 @@
 ﻿using Avalonia.Markup.Xaml;
-using Tel.Egram.Model.Popups;
+using Smith.Model.Popups;
 
 namespace Tel.Egram.Views.Popups
 {

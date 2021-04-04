@@ -3,7 +3,7 @@ using Avalonia.Platform;
 using JetBrains.Annotations;
 using Splat;
 using Tel.Egram.Application;
-using Tel.Egram.Model.Application;
+using Smith.Model.Application;
 using Tel.Egram.Views.Application;
 
 namespace Smith

@@ -1,7 +1,7 @@
 ﻿using Avalonia;
 using Avalonia.Markup.Xaml;
 using ReactiveUI;
-using Tel.Egram.Model.Messenger.Explorer.Messages;
+using Smith.Model.Messenger.Explorer.Messages;
 
 namespace Tel.Egram.Views.Messenger.Explorer.Messages.Shared
 {

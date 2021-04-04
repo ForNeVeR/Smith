@@ -1,7 +1,7 @@
 ﻿using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
-using Tel.Egram.Model.Messenger.Informer;
+using Smith.Model.Messenger.Informer;
 
 namespace Tel.Egram.Views.Messenger.Informer
 {

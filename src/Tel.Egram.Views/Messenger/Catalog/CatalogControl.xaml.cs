@@ -1,7 +1,7 @@
 ﻿using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
-using Tel.Egram.Model.Messenger.Catalog;
+using Smith.Model.Messenger.Catalog;
 
 namespace Tel.Egram.Views.Messenger.Catalog
 {

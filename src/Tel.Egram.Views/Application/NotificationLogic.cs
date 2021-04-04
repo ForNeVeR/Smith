@@ -6,7 +6,7 @@ using Avalonia.Controls;
 using ReactiveUI;
 using Splat;
 using Tel.Egram.Views.Notifications;
-using Tel.Egram.Model.Notifications;
+using Smith.Model.Notifications;
 using Tel.Egram.Services.Utils.Platforms;
 using Tel.Egram.Services.Utils.Reactive;
 
@@ -21,7 +21,7 @@ namespace Tel.Egram.Views.Application
                 Locator.Current.GetService<IPlatform>(),
                 Locator.Current.GetService<INotificationController>());
         }
-        
+
         public static IDisposable BindNotifications(
             this MainWindow mainWindow,
             IPlatform platform,
@@ -39,7 +39,7 @@ namespace Tel.Egram.Views.Application
                         var screen = mainWindow.Screens.Primary;
                         var window = new NotificationWindow();
                         window.Show();
-                        
+
                         window.DataContext = model;
                         window.Position = new PixelPoint(
                             GetXForNotification(platform, screen.Bounds, window.Bounds),
