@@ -10,6 +10,7 @@ using ReactiveUI;
 using Smith.Model.Messenger.Explorer;
 using Tel.Egram.Services.Utils;
 using Tel.Egram.Services.Utils.Reactive;
+using Range = Tel.Egram.Services.Utils.Range;
 
 namespace Smith.Views.Messenger.Explorer
 {

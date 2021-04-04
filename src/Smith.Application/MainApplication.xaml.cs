@@ -14,12 +14,12 @@ namespace Smith.Application
         {
             AvaloniaXamlLoader.Load(this);
 
-            Initializing?.Invoke(this, null);
+            Initializing?.Invoke(this, EventArgs.Empty);
         }
 
         protected override void OnExiting(object sender, EventArgs e)
         {
-            Disposing?.Invoke(this, null);
+            Disposing?.Invoke(this, EventArgs.Empty);
 
             base.OnExiting(sender, e);
         }

@@ -4,6 +4,7 @@ using System.Reactive.Disposables;
 using System.Reactive.Linq;
 using DynamicData;
 using DynamicData.Binding;
+using Microsoft.VisualBasic.CompilerServices;
 using PropertyChanged;
 using ReactiveUI;
 using Smith.Model.Messenger.Explorer.Items;
@@ -11,6 +12,7 @@ using Smith.Model.Messenger.Explorer.Loaders;
 using Tel.Egram.Services.Messaging.Chats;
 using Tel.Egram.Services.Utils;
 using Tel.Egram.Services.Utils.Reactive;
+using Range = Tel.Egram.Services.Utils.Range;
 
 namespace Smith.Model.Messenger.Explorer
 {
