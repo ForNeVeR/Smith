@@ -3,13 +3,15 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Caching.Memory;
+using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
-using Splat;
-using TdLib;
+using ReactiveUI;
 using Smith.Application;
 using Smith.Model.Messenger.Explorer.Factories;
 using Smith.Model.Notifications;
 using Smith.Model.Popups;
+using Splat;
+using TdLib;
 using Tel.Egram.Services.Authentication;
 using Tel.Egram.Services.Graphics;
 using Tel.Egram.Services.Graphics.Avatars;
@@ -23,8 +25,8 @@ using Tel.Egram.Services.Settings;
 using Tel.Egram.Services.Utils.Formatting;
 using Tel.Egram.Services.Utils.Platforms;
 using Tel.Egram.Services.Utils.TdLib;
-using IBitmapLoader = Tel.Egram.Services.Graphics.IBitmapLoader;
 using BitmapLoader = Tel.Egram.Services.Graphics.BitmapLoader;
+using IBitmapLoader = Tel.Egram.Services.Graphics.IBitmapLoader;
 using ILogger = Microsoft.Extensions.Logging.ILogger;
 using IMatrixAgent = Smith.Services.Matrix.IAgent;
 using MatrixAgent = Smith.Services.Matrix.Agent;
@@ -35,6 +37,20 @@ namespace Smith
 {
     public static class Registry
     {
+        public static void AddLogging(this IMutableDependencyResolver services)
+        {
+            // TODO: Update the logging to use Splat helper
+            var loggerFactory = LoggerFactory.Create(builder => builder.AddConsole());
+            services.RegisterLazySingleton(() => loggerFactory.CreateLogger("Smith"));
+
+            RxApp.DefaultExceptionHandler = new LoggerExceptionHandler(services.GetService<ILogger>());
+        }
+
+        public static void AddHttp(this IMutableDependencyResolver services)
+        {
+            services.Register(() => new HttpClient());
+        }
+
         public static void AddUtils(this IMutableDependencyResolver services)
         {
             services.RegisterLazySingleton<IPlatform>(Platform.GetPlatform);

@@ -23,6 +23,9 @@ namespace Smith
         private static void ConfigureServices(
             IMutableDependencyResolver services)
         {
+            services.AddLogging();
+
+            services.AddHttp();
             services.AddUtils();
             services.AddTdLib();
             services.AddMatrixSdk();
