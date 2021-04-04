@@ -16,7 +16,7 @@ ProjectSection(SolutionItems) = preProject
 	src\Directory.Build.props = src\Directory.Build.props
 EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tel.Egram.Views", "src\Tel.Egram.Views\Tel.Egram.Views.csproj", "{E272E3DE-72EF-42BF-9E76-09C569A4BCE9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Smith.Views", "src\Smith.Views\Smith.Views.csproj", "{E272E3DE-72EF-42BF-9E76-09C569A4BCE9}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{7B719453-BD26-4EFA-A1C8-A615B287988F}"
 EndProject

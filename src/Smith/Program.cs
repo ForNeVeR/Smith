@@ -4,7 +4,7 @@ using JetBrains.Annotations;
 using Splat;
 using Smith.Application;
 using Smith.Model.Application;
-using Tel.Egram.Views.Application;
+using Smith.Views.Application;
 
 namespace Smith
 {
