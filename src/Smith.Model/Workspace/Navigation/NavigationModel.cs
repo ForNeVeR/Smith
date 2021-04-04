@@ -1,7 +1,7 @@
 using System.Reactive.Disposables;
 using PropertyChanged;
 using ReactiveUI;
-using Tel.Egram.Services.Graphics.Avatars;
+using Smith.Services.Graphics.Avatars;
 
 namespace Smith.Model.Workspace.Navigation
 {

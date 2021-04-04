@@ -5,9 +5,9 @@ using System.Reactive.Linq;
 using DynamicData;
 using ReactiveUI;
 using Smith.Model.Messenger.Catalog.Entries;
+using Smith.Services.Messaging.Chats;
+using Smith.Services.Utils.Reactive;
 using Splat;
-using Tel.Egram.Services.Messaging.Chats;
-using Tel.Egram.Services.Utils.Reactive;
 
 namespace Smith.Model.Messenger.Catalog
 {

@@ -1,8 +1,8 @@
 using System;
 using System.Reactive.Linq;
 using ReactiveUI;
+using Smith.Services.Utils.Reactive;
 using Splat;
-using Tel.Egram.Services.Utils.Reactive;
 
 namespace Smith.Model.Popups
 {

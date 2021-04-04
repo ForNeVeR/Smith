@@ -8,8 +8,8 @@ using Smith.Model.Messenger.Editor;
 using Smith.Model.Messenger.Explorer;
 using Smith.Model.Messenger.Homepage;
 using Smith.Model.Messenger.Informer;
-using Tel.Egram.Services.Messaging.Chats;
-using Tel.Egram.Services.Utils.Reactive;
+using Smith.Services.Messaging.Chats;
+using Smith.Services.Utils.Reactive;
 
 namespace Smith.Model.Messenger
 {

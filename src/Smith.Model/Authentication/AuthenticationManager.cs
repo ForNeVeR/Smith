@@ -3,7 +3,7 @@ using System.Reactive.Disposables;
 using System.Reactive.Linq;
 using ReactiveUI;
 using Smith.Model.Authentication.Results;
-using Smith.Services.Authentication;
+using Smith.Services.Matrix.Authentication;
 using Splat;
 
 namespace Smith.Model.Authentication
@@ -26,9 +26,8 @@ namespace Smith.Model.Authentication
 
         public IDisposable Bind(AuthenticationModel model)
         {
-            var canAuthenticate = model
-                .WhenAnyValue(x => x.UserId, x => x.Password)
-                .Select(pair => AreCredentialsValid(pair.Item1, pair.Item2));
+            var canAuthenticate = Observable.Select<Tuple<string, string>, bool>(model
+                    .WhenAnyValue(x => x.UserId, x => x.Password), pair => AreCredentialsValid(pair.Item1, pair.Item2));
 
             var disposable = new CompositeDisposable();
 

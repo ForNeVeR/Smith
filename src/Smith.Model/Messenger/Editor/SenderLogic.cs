@@ -2,11 +2,11 @@ using System;
 using System.Reactive;
 using System.Reactive.Linq;
 using ReactiveUI;
+using Smith.Services.Messaging.Chats;
+using Smith.Services.Messaging.Messages;
+using Smith.Services.Utils.Reactive;
 using Splat;
 using TdLib;
-using Tel.Egram.Services.Messaging.Chats;
-using Tel.Egram.Services.Messaging.Messages;
-using Tel.Egram.Services.Utils.Reactive;
 
 namespace Smith.Model.Messenger.Editor
 {

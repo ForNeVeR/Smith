@@ -1,5 +1,5 @@
 using Smith.Model.Messenger.Explorer.Messages;
-using Tel.Egram.Services.Messaging.Messages;
+using Smith.Services.Messaging.Messages;
 
 namespace Smith.Model.Messenger.Explorer.Factories
 {

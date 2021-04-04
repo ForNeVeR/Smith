@@ -6,7 +6,7 @@ using DynamicData.Binding;
 using PropertyChanged;
 using ReactiveUI;
 using Smith.Model.Messenger.Catalog.Entries;
-using Tel.Egram.Services.Messaging.Chats;
+using Smith.Services.Messaging.Chats;
 
 namespace Smith.Model.Messenger.Catalog
 {

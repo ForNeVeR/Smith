@@ -1,10 +1,10 @@
 using System;
 using System.Reactive.Linq;
 using ReactiveUI;
+using Smith.Services.Graphics.Avatars;
+using Smith.Services.Messaging.Users;
+using Smith.Services.Utils.Reactive;
 using Splat;
-using Tel.Egram.Services.Graphics.Avatars;
-using Tel.Egram.Services.Messaging.Users;
-using Tel.Egram.Services.Utils.Reactive;
 
 namespace Smith.Model.Workspace.Navigation
 {

@@ -4,8 +4,8 @@ using ReactiveUI;
 using Smith.Model.Messenger;
 using Smith.Model.Settings;
 using Smith.Model.Workspace.Navigation;
-using Tel.Egram.Services.Messaging.Chats;
-using Tel.Egram.Services.Utils.Reactive;
+using Smith.Services.Messaging.Chats;
+using Smith.Services.Utils.Reactive;
 
 namespace Smith.Model.Workspace
 {

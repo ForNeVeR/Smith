@@ -1,10 +1,10 @@
 using System;
 using System.Reactive.Linq;
 using ReactiveUI;
+using Smith.Services.Utils.Reactive;
+using Smith.Services.Utils.TdLib;
 using Splat;
 using TdLib;
-using Tel.Egram.Services.Utils.Reactive;
-using Tel.Egram.Services.Utils.TdLib;
 
 namespace Smith.Model.Application
 {

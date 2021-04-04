@@ -2,9 +2,9 @@ using System;
 using System.Reactive.Linq;
 using ReactiveUI;
 using Smith.Model.Notifications;
+using Smith.Services.Messaging.Notifications;
+using Smith.Services.Utils.Reactive;
 using Splat;
-using Tel.Egram.Services.Messaging.Notifications;
-using Tel.Egram.Services.Utils.Reactive;
 
 namespace Smith.Model.Messenger
 {

@@ -2,8 +2,8 @@ using System;
 using System.IO;
 using System.Reactive.Linq;
 using ReactiveUI;
+using Smith.Services.Persistance;
 using Splat;
-using Tel.Egram.Services.Persistance;
 
 namespace Smith.Model.Messenger.Explorer.Messages.Special
 {

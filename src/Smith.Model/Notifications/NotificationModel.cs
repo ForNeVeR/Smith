@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using PropertyChanged;
 using ReactiveUI;
-using Tel.Egram.Services.Messaging.Notifications;
+using Smith.Services.Messaging.Notifications;
 
 namespace Smith.Model.Notifications
 {

@@ -3,9 +3,9 @@ using System.Reactive;
 using System.Reactive.Linq;
 using System.Reactive.Subjects;
 using Smith.MatrixSdk.Extensions;
-using Smith.Services.Matrix;
+using Smith.Services.Matrix.Agents;
 
-namespace Smith.Services.Authentication
+namespace Smith.Services.Matrix.Authentication
 {
     public class Authenticator : IAuthenticator
     {

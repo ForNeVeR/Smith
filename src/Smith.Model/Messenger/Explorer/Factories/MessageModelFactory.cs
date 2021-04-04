@@ -1,9 +1,8 @@
-using System;
 using System.Linq;
 using Smith.Model.Messenger.Explorer.Messages;
+using Smith.Services.Messaging.Messages;
+using Smith.Services.Utils.Formatting;
 using TdLib;
-using Tel.Egram.Services.Messaging.Messages;
-using Tel.Egram.Services.Utils.Formatting;
 
 namespace Smith.Model.Messenger.Explorer.Factories
 {

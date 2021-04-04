@@ -2,7 +2,7 @@
     <PropertyGroup>
         <!-- TODO: Eventually enable everywhere -->
         <Nullable Condition="
-            '$(MSBuildProjectName)' == 'Tel.Egram.Services'
+            '$(MSBuildProjectName)' == 'Smith.Services'
             Or '$(MSBuildProjectName)' == 'Smith.Model'
             Or '$(MSBuildProjectName)' == 'Smith.Views'">disable</Nullable>
 

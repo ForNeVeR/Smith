@@ -5,9 +5,9 @@ using ReactiveUI;
 using Smith.Model.Application.Startup;
 using Smith.Model.Authentication;
 using Smith.Model.Workspace;
-using Smith.Services.Authentication;
+using Smith.Services.Matrix.Authentication;
+using Smith.Services.Utils.Reactive;
 using Splat;
-using Tel.Egram.Services.Utils.Reactive;
 
 namespace Smith.Model.Application
 {

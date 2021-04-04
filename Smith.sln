@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Smith.Application", "src\Sm
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Smith.Model", "src\Smith.Model\Smith.Model.csproj", "{D532C829-670F-463A-BF6E-1557C0FCC33B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tel.Egram.Services", "src\Tel.Egram.Services\Tel.Egram.Services.csproj", "{DAF9F0FC-DFE1-48FC-92B3-30721D3A7A3F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Smith.Services", "src\Smith.Services\Smith.Services.csproj", "{DAF9F0FC-DFE1-48FC-92B3-30721D3A7A3F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{767B3FCF-751E-46FC-AF59-0949BA90EB74}"
 ProjectSection(SolutionItems) = preProject

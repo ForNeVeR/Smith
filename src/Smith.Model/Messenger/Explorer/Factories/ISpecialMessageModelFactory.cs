@@ -1,7 +1,7 @@
 using Smith.Model.Messenger.Explorer.Messages;
 using Smith.Model.Messenger.Explorer.Messages.Special;
+using Smith.Services.Messaging.Messages;
 using TdLib;
-using Tel.Egram.Services.Messaging.Messages;
 
 namespace Smith.Model.Messenger.Explorer.Factories
 {

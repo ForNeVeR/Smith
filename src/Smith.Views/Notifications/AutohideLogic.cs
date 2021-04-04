@@ -2,7 +2,7 @@ using System;
 using System.Reactive.Disposables;
 using System.Reactive.Linq;
 using ReactiveUI;
-using Tel.Egram.Services.Utils.Reactive;
+using Smith.Services.Utils.Reactive;
 
 namespace Smith.Views.Notifications
 {

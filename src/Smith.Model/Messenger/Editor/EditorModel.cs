@@ -2,7 +2,7 @@ using System.Reactive;
 using System.Reactive.Disposables;
 using PropertyChanged;
 using ReactiveUI;
-using Tel.Egram.Services.Messaging.Chats;
+using Smith.Services.Messaging.Chats;
 
 namespace Smith.Model.Messenger.Editor
 {

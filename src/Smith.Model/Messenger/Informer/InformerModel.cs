@@ -1,8 +1,8 @@
 using System.Reactive.Disposables;
 using PropertyChanged;
 using ReactiveUI;
-using Tel.Egram.Services.Graphics.Avatars;
-using Tel.Egram.Services.Messaging.Chats;
+using Smith.Services.Graphics.Avatars;
+using Smith.Services.Messaging.Chats;
 
 namespace Smith.Model.Messenger.Informer
 {

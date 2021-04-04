@@ -1,4 +1,4 @@
-﻿namespace Smith.Services.Authentication
+﻿namespace Smith.Services.Matrix.Authentication
 {
     public enum AuthenticationState
     {

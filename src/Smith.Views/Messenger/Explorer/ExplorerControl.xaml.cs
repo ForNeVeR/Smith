@@ -5,12 +5,10 @@ using System.Reactive.Linq;
 using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
-using Avalonia.Threading;
 using ReactiveUI;
 using Smith.Model.Messenger.Explorer;
-using Tel.Egram.Services.Utils;
-using Tel.Egram.Services.Utils.Reactive;
-using Range = Tel.Egram.Services.Utils.Range;
+using Smith.Services.Utils.Reactive;
+using Range = Smith.Services.Utils.Range;
 
 namespace Smith.Views.Messenger.Explorer
 {

@@ -2,13 +2,12 @@ using System;
 using System.Reactive.Disposables;
 using System.Reactive.Linq;
 using Avalonia;
-using Avalonia.Controls;
 using ReactiveUI;
-using Splat;
-using Smith.Views.Notifications;
 using Smith.Model.Notifications;
-using Tel.Egram.Services.Utils.Platforms;
-using Tel.Egram.Services.Utils.Reactive;
+using Smith.Services.Utils.Platforms;
+using Smith.Services.Utils.Reactive;
+using Smith.Views.Notifications;
+using Splat;
 
 namespace Smith.Views.Application
 {

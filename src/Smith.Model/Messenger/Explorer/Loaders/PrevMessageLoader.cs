@@ -1,18 +1,16 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Reactive.Disposables;
 using System.Reactive.Linq;
-using System.Threading;
 using DynamicData;
 using ReactiveUI;
 using Smith.Model.Messenger.Explorer.Factories;
 using Smith.Model.Messenger.Explorer.Items;
 using Smith.Model.Messenger.Explorer.Messages;
+using Smith.Services.Messaging.Chats;
+using Smith.Services.Messaging.Messages;
+using Smith.Services.Utils.Reactive;
 using Splat;
-using Tel.Egram.Services.Messaging.Chats;
-using Tel.Egram.Services.Messaging.Messages;
-using Tel.Egram.Services.Utils.Reactive;
 
 namespace Smith.Model.Messenger.Explorer.Loaders
 {

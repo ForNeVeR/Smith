@@ -1,4 +1,4 @@
-using Tel.Egram.Services.Graphics.Previews;
+using Smith.Services.Graphics.Previews;
 
 namespace Smith.Model.Messenger.Explorer.Messages.Visual
 {

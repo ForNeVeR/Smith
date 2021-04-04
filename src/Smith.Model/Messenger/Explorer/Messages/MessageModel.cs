@@ -1,6 +1,6 @@
 ﻿using Smith.Model.Messenger.Explorer.Items;
-using Tel.Egram.Services.Graphics.Avatars;
-using Tel.Egram.Services.Messaging.Messages;
+using Smith.Services.Graphics.Avatars;
+using Smith.Services.Messaging.Messages;
 
 namespace Smith.Model.Messenger.Explorer.Messages
 {

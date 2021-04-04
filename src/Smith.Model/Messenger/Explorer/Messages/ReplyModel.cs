@@ -1,7 +1,7 @@
 using PropertyChanged;
+using Smith.Services.Graphics.Previews;
+using Smith.Services.Messaging.Messages;
 using TdLib;
-using Tel.Egram.Services.Graphics.Previews;
-using Tel.Egram.Services.Messaging.Messages;
 
 namespace Smith.Model.Messenger.Explorer.Messages
 {

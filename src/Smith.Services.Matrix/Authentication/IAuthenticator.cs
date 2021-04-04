@@ -1,7 +1,7 @@
 using System;
 using System.Reactive;
 
-namespace Smith.Services.Authentication
+namespace Smith.Services.Matrix.Authentication
 {
     public interface IAuthenticator
     {

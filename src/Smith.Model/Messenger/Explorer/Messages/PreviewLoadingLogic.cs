@@ -3,9 +3,9 @@ using System.Reactive.Disposables;
 using System.Reactive.Linq;
 using ReactiveUI;
 using Smith.Model.Messenger.Explorer.Messages.Visual;
+using Smith.Services.Graphics.Previews;
+using Smith.Services.Utils.Reactive;
 using Splat;
-using Tel.Egram.Services.Graphics.Previews;
-using Tel.Egram.Services.Utils.Reactive;
 
 namespace Smith.Model.Messenger.Explorer.Messages
 {

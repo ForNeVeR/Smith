@@ -4,10 +4,10 @@ using System.Reactive.Disposables;
 using System.Reactive.Linq;
 using DynamicData.Binding;
 using ReactiveUI;
+using Smith.Services.Settings;
+using Smith.Services.Utils.Reactive;
 using Splat;
 using TdLib;
-using Tel.Egram.Services.Settings;
-using Tel.Egram.Services.Utils.Reactive;
 
 namespace Smith.Model.Settings.Proxy
 {

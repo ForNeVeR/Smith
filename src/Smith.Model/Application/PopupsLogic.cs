@@ -3,8 +3,8 @@ using System.Reactive.Disposables;
 using System.Reactive.Linq;
 using ReactiveUI;
 using Smith.Model.Popups;
+using Smith.Services.Utils.Reactive;
 using Splat;
-using Tel.Egram.Services.Utils.Reactive;
 
 namespace Smith.Model.Application
 {
