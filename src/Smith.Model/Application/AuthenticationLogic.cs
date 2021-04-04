@@ -5,9 +5,8 @@ using ReactiveUI;
 using Smith.Model.Application.Startup;
 using Smith.Model.Authentication;
 using Smith.Model.Workspace;
+using Smith.Services.Authentication;
 using Splat;
-using TdLib;
-using Tel.Egram.Services.Authentication;
 using Tel.Egram.Services.Utils.Reactive;
 
 namespace Smith.Model.Application
@@ -33,16 +32,6 @@ namespace Smith.Model.Application
                 .SubscribeOn(RxApp.TaskpoolScheduler)
                 .ObserveOn(RxApp.MainThreadScheduler);
 
-            stateUpdates.OfType<TdApi.AuthorizationState.AuthorizationStateWaitTdlibParameters>()
-                .SelectMany(_ => authenticator.SetupParameters())
-                .Accept()
-                .DisposeWith(disposable);
-
-            stateUpdates.OfType<TdApi.AuthorizationState.AuthorizationStateWaitEncryptionKey>()
-                .SelectMany(_ => authenticator.CheckEncryptionKey())
-                .Accept()
-                .DisposeWith(disposable);
-
             stateUpdates
                 .Accept(state => HandleState(model, state))
                 .DisposeWith(disposable);
@@ -50,27 +39,23 @@ namespace Smith.Model.Application
             return disposable;
         }
 
-        private static void HandleState(MainWindowModel model, TdApi.AuthorizationState state)
+        private static void HandleState(MainWindowModel model, AuthenticationState state)
         {
             switch (state)
             {
-                case TdApi.AuthorizationState.AuthorizationStateWaitTdlibParameters _:
-                case TdApi.AuthorizationState.AuthorizationStateWaitEncryptionKey _:
-                    GoToStartupPage(model);
-                    break;
-
-                case TdApi.AuthorizationState.AuthorizationStateWaitPhoneNumber _:
-                case TdApi.AuthorizationState.AuthorizationStateWaitCode _:
-                case TdApi.AuthorizationState.AuthorizationStateWaitPassword _:
+                case AuthenticationState.WaitingLoginAndPassword:
+                case AuthenticationState.Authenticating:
                     GoToAuthenticationPage(model);
                     break;
-
-                case TdApi.AuthorizationState.AuthorizationStateReady _:
+                case AuthenticationState.Authenticated:
                     GoToWorkspacePage(model);
                     break;
+                default:
+                    throw new Exception($"Unknown authentication state: {state}");
             }
         }
 
+        // TODO[F]: Remove this
         private static void GoToStartupPage(MainWindowModel model)
         {
             if (model.StartupModel == null)

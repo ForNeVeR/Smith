@@ -16,6 +16,8 @@
     Background="#ffffff"
     >
 
+    <!-- TODO: The window is not resizable. Why? -->
+
     <Panel>
 
         <Carousel
