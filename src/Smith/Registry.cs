@@ -10,7 +10,6 @@ using Smith.Application;
 using Smith.Model.Messenger.Explorer.Factories;
 using Smith.Model.Notifications;
 using Smith.Model.Popups;
-using Smith.Services.Authentication;
 using Smith.Services.Graphics;
 using Smith.Services.Graphics.Avatars;
 using Smith.Services.Graphics.Previews;
@@ -234,12 +233,6 @@ namespace Smith
             });
 
             // auth
-            services.RegisterLazySingleton<IAuthenticator>(() =>
-            {
-                var agent = services.GetService<IAgent>();
-                var storage = services.GetService<IStorage>();
-                return new Authenticator(agent, storage);
-            });
             services.RegisterLazySingleton<IMatrixAuthenticator>(() =>
             {
                 var agent = services.GetService<IMatrixAgent>();
