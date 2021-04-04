@@ -7,7 +7,7 @@ namespace Smith.Services.Matrix.Agents
 {
     public interface IAgent
     {
-        public void SetHomeserver(Uri homeserver);
+        void SetHomeserver(Uri homeserver);
         void SetAccessToken(string accessToken);
 
         Task<LoginResponse> AuthenticateAsync(
