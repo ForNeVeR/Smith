@@ -1,4 +1,4 @@
-# Smith [![Status Zero][status-zero]][andivionian-status-classifier]
+# Smith [![Status Umbra][status-umbra]][andivionian-status-classifier]
 
 Smith is a cross-platform [Matrix][matrix] GUI client application written in
 .NET.
@@ -27,11 +27,11 @@ Project History
 
 Smith is forked from [egram.tel][], a Telegram client.
 
+[andivionian-status-classifier]: https://github.com/ForNeVeR/andivionian-status-classifier#status-umbra-
 [changelog]: ./CHANGELOG.md
 [dotnet]: https://dotnet.microsoft.com/download
 [egram.tel]: https://github.com/egramtel/egram.tel
 [license]: ./LICENSE
 [matrix]: https://matrix.org/
-[status-zero]: https://img.shields.io/badge/status-zero-lightgrey.svg
 
-[andivionian-status-classifier]: https://github.com/ForNeVeR/andivionian-status-classifier#status-zero-
+[status-umbra]: https://img.shields.io/badge/status-umbra-red.svg
