@@ -30,6 +30,7 @@ ProjectSection(SolutionItems) = preProject
 	.editorconfig = .editorconfig
 	README.md = README.md
 	CHANGELOG.md = CHANGELOG.md
+	NuGet.Config = NuGet.Config
 EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Smith.Services.Matrix", "src\Smith.Services.Matrix\Smith.Services.Matrix.csproj", "{300EAB4F-8FB7-416A-A3D1-20058A6F8958}"
